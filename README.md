@@ -21,7 +21,7 @@ Gera nýja möppu
 
 git remote
 
-git clone https://github.com/dingolfsson/Hopverkefni.git
+git clone https://github.com/alli959/vefLokaverkefni
 
 cd Hopverkefni
 
