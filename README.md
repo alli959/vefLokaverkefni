@@ -5,7 +5,7 @@
 
 Sjá stöðuna á verkefni => ´git status´
 
-Sjá branches og í hverju þú ert í => ´git branch -a´
+Sjá branches og í hverju þú ert í => ´git branch´
 
 # Skrá username og password (svo þið þurfið ekki að gera það fyrir hvert push)
 
@@ -21,7 +21,7 @@ Gera nýja möppu
 
 git remote
 
-git clone https://github.com/dingolfsson/Hopverkefni.git
+git clone https://github.com/alli959/vefLokaverkefni
 
 cd Hopverkefni
 
@@ -33,7 +33,7 @@ Núna ætti ´git remote´ að sýna "origin" á skjánum.
 
 # Dæmi með git branch og fara i tad
 
-git branch -b Notandi
+git checkout branchnafn
 
 # Gera prufu skrá og commit-a
 
@@ -45,15 +45,21 @@ git commit -m "Prufuskrá bætt við"
 
 Núna er búið að bæta við og commit-a test.txt á local branchinu, ekki master.
 
-# Bæta við test.txt í resp.
+# Hvernig skal vinna þetta.
 
-git push -u origin nafn-a-branchi
+git branch "þá sérðu hvaða branchi þú ert í, vertu í þínu"
+
+git add skjalnafn
+
+git commit -m "message"
+
+git push origin branchnafn
 
 git checkout master
 
-git pull origin master
+git pull origin master  "mikilvægt að athuga hvort þú getir pullað, áður en þú pushar"
 
-git merge nafn-a-branchi
+git merge branchnafn
 
 git push origin master
 
