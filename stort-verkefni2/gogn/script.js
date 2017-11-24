@@ -1,4 +1,5 @@
 'use strict';
+var button1 = document.getElementById('button1');
 var cat1 = document.createElement('text1');
 var picture1 = document.createElement('img');
 var picture2 = document.createElement('img');
@@ -11,10 +12,18 @@ var video4 = document.getElementById('4');
 var source = document.createElement('source');
 
 
+
+function  testfunction(){
+  button1.onclick = function(){
+    window.location.assign("video.html?id=2");
+  }
+}
+
 $.getJSON( "videos.json", function( data )  {
     categories(data.categories);
     addVideo(data.videos);
   });
+
 
   function categories(data){
     var div1 = document.createElement('text1');
@@ -22,8 +31,6 @@ $.getJSON( "videos.json", function( data )  {
     div1.appendChild(cat1);
     div1.querySelector('text1');
     div1.textContent = data[0].title;
-
-
     document.body.appendChild(div1);
   }
 
@@ -33,12 +40,5 @@ function addVideo(data){
   div2.appendChild(picture1);
   picture2.setAttribute("src", data[1].poster);
   div2.appendChild(picture2);
-
   document.body.appendChild(div2);
-}
-
-
-
-class forsida{
-
 }
