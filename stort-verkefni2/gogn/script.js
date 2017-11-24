@@ -1,29 +1,45 @@
-'use strict';
-var picture1 = document.createElement("IMG");
-var picture2 = document.createElement("IMG");
-var picture3 = document.createElement("IMG");
-var picture4 = document.createElement("IMG");
+var button1 = document.getElementById('button1');
+var cat1 = document.createElement('text1');
+var picture1 = document.createElement('img');
+var picture2 = document.createElement('img');
+var picture3 = document.createElement('img');
+var picture4 = document.createElement('img');
 var video1 = document.getElementById('1');
 var video2 = document.getElementById('2');
 var video3 = document.getElementById('3');
 var video4 = document.getElementById('4');
 var source = document.createElement('source');
 
-$.getJSON( "videos.json", function( data )  {
-    addVideo(data.videos);
-  });
 
-function playVideo(data){
-  video1.setAttribute("src", data[1].video);
-  video1.appendChild(source);
-  video1.play();
+function  testfunction(){
+  button1.onclick = function(){
+    window.location.assign("video.html?id=2");
+  }
 }
 
+
+$.getJSON( "videos.json", function( data )  {
+    addVideo(data.videos);
+    categories(data.categories);
+  });
+
+  function categories(data){
+    var div2 = document.createElement('div');
+    cat1.setAttribute("src", data[0].title);
+    div2.appendChild(cat1);
+    div2.querySelector('text1');
+    div2.textContent = data[0].title;
+
+
+    document.body.appendChild(div2);
+  }
+
 function addVideo(data){
+  var div = document.createElement('div');
   picture1.setAttribute("src", data[0].poster);
-  picture1.setAttribute("width", "20");
-  picture1.setAttribute("height", "20");
-  picture1.setAttribute("alt", "test");
-  document.body.appendChild(picture1);
-  playVideo(data);
+  div.appendChild(picture1);
+  picture2.setAttribute("src", data[1].poster);
+  div.appendChild(picture2);
+
+  document.body.appendChild(div);
 }
