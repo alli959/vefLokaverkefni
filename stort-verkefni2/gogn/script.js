@@ -2,14 +2,15 @@
 var empty = document.createElement('div');
 var cat1 = document.createElement('text1');
 var cat2 = document.createElement('text2');
+var cat3 = document.createElement('text3');
 var picture1 = document.createElement('img');
+var picture11 = document.createElement('img');
 var picture2 = document.createElement('img');
+var picture22 = document.createElement('img');
 var picture3 = document.createElement('img');
+var picture33 = document.createElement('img');
 var picture4 = document.createElement('img');
-var video1 = document.getElementById('1');
-var video2 = document.getElementById('2');
-var video3 = document.getElementById('3');
-var video4 = document.getElementById('4');
+var picture44 = document.createElement('img');
 var source = document.createElement('source');
 
 
@@ -24,6 +25,11 @@ $.getJSON( "videos.json", function(data)  {
     emptydiv();
     categories1(data.categories);
     addVideo2(data.videos);
+    emptydiv();
+    categories2(data.categories);
+    addVideo3(data.videos);
+    emptydiv();
+    emptydiv();
   });
 
 
@@ -76,24 +82,60 @@ function addVideo2(data){
   var div5 = document.createElement('row2');
 
 
-  picture1.setAttribute("src", data[0].poster);
-  picture1.onclick = function(){
+  picture11.setAttribute("src", data[0].poster2);
+  picture11.onclick = function(){
     playVideo('1')
   }
-  div5.appendChild(picture1);
+  div5.appendChild(picture11);
 
 
-  picture3.setAttribute("src", data[3].poster);
+  picture3.setAttribute("src", data[2].poster);
   picture3.onclick = function(){
     playVideo('3');
   }
   div5.appendChild(picture3);
-  document.body.appendChild(div5);
 
+  picture4.setAttribute("src", data[3].poster);
+  picture4.onclick = function(){
+    playVideo('3');
+  }
+  div5.appendChild(picture4);
+  document.body.appendChild(div5);
 }
 
+function categories2(data){
+  var div6 = document.createElement('text3');
+  cat3.setAttribute("src", data[2].title);
+  div6.appendChild(cat3);
+  div6.querySelector('text3');
+  div6.textContent = data[2].title;
+  document.body.appendChild(div6);
+}
+
+function addVideo3(data){
+  var div7 = document.createElement('row3');
 
 
+  picture22.setAttribute("src", data[1].poster2);
+  picture22.onclick = function(){
+    playVideo('1')
+  }
+  div7.appendChild(picture22);
+
+
+  picture33.setAttribute("src", data[2].poster2);
+  picture33.onclick = function(){
+    playVideo('3');
+  }
+  div7.appendChild(picture33);
+
+  picture44.setAttribute("src", data[3].poster2);
+  picture44.onclick = function(){
+    playVideo('3');
+  }
+  div7.appendChild(picture44);
+  document.body.appendChild(div7);
+}
 
 
 //----------------

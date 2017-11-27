@@ -6,6 +6,7 @@
       "created": 1509804047011,
       "duration": 5,
       "poster": "./videos/small.png",
+      "poster2": "./videos/small.png",
       "video": "./videos/small.mp4"
     },
     {
@@ -14,6 +15,7 @@
       "created": 1507804047011,
       "duration": 62,
       "poster": "./videos/bunny.png",
+      "poster2": "./videos/bunny.png",
       "video": "./videos/bunny.mp4"
     },
     {
@@ -22,6 +24,7 @@
       "created": 1505904047011,
       "duration": 3600,
       "poster": "./videos/16-9.png",
+      "poster2": "./videos/16-9.png",
       "video": "./videos/bunny.mp4"
     },
     {
@@ -30,6 +33,7 @@
       "created": 1504904047011,
       "duration": 220,
       "poster": "./videos/16-9.png",
+      "poster2": "./videos/16-9.png",
       "video": "./videos/bunny.mp4"
     }
   ],
