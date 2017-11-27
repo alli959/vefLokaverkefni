@@ -103,3 +103,15 @@ button{
   border: transparent;
   outline: none;
 }
+#unmute{
+  display:none;
+}
+#pause{
+  display:none;
+}
+
+#play{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
