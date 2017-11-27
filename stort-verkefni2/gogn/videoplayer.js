@@ -4,7 +4,13 @@ var video = document.getElementById('videoplay');
 
 var source = document.createElement('source');
 
-var back = document.createElement('p');
+var goback = document.createElement('p');
+
+goback.textContent = "til baka";
+
+document.body.appendChild(goback);
+
+
 
 var playing = false;
 
@@ -83,17 +89,7 @@ video.onclick = function(){
   }
 }
 
-function goback(){
-  var theText = document.createElement('p');
-  back.setAttribute("Til baka");
-  theText.appendChild(back);
-  theText.querySelector('p');
-  theText.textContent = "Til baka";
-  document.body.appendChild(theText);
-  /*var div1 = document.createElement('text1');
-  cat1.setAttribute("src", data[0].title);
-  div1.appendChild(cat1);
-  div1.querySelector('text1');
-  div1.textContent = data[0].title;
-  document.body.appendChild(div1);*/
+
+goback.onclick = function(){
+  window.location.href = "/";
 }
