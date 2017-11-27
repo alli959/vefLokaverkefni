@@ -6,7 +6,7 @@ var source = document.createElement('source');
 
 var goback = document.createElement('p');
 
-goback.textContent = "til baka";
+goback.textContent = "Til baka";
 
 document.body.appendChild(goback);
 

@@ -33,6 +33,11 @@ html {
 
 /*CSS fyrir script.js */
 
+img:nth-of-type(3){
+  margin-right: auto;
+  margin-left: 1%;
+}
+
   row1{
     display: flex;
     justify-content: space-around;
@@ -52,12 +57,6 @@ html {
       align-items: center;
       flex-wrap: wrap;
   }
-
-  img:nth-of-type(3){
-    margin-right: auto;
-    margin-left: 1%;
-  }
-
 
   text1{
     display: block;
@@ -98,17 +97,38 @@ html {
 
   /*CSS fyrir videoplayer.js */
 
-  .videoplaying{
-    margin-bottom: 1em;
+  button{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    height: 9em;
+    background-color: transparent;
     border: transparent;
+    outline: none;
+  }
+
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    padding-bottom: 1em;
+  }
+
+  .videoplaying{
+    border: transparent;
+    padding-bottom: 0em;
   }
 
   .controls{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1em;
     border: transparent;
+    padding-bottom: 0.3em;
   }
 
   #title{
@@ -126,19 +146,10 @@ html {
     width: 100%;
   }
 
-button{
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10em;
-  height: 9em;
-  background-color: transparent;
-  border: transparent;
-  outline: none;
-}
 #unmute{
   display:none;
 }
+
 #pause{
   display:none;
 }
