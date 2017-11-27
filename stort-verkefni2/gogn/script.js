@@ -89,6 +89,7 @@ function addVideo2(data){
   }
   div5.appendChild(picture3);
   document.body.appendChild(div5);
+  
 }
 
 
