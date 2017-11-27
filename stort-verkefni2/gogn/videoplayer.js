@@ -1,8 +1,9 @@
+var title = document.getElementById('title');
+
 var video = document.getElementById('videoplay');
 
 var source = document.createElement('source');
 
-var title = document.createElement('title');
 
 
 $.getJSON( "videos.json", function( data )  {
@@ -24,12 +25,9 @@ function playVideo(data){
 
 
 function setTitle(data){
-  var titleset = document.createElement('titleset');
   title.setAttribute("src", data);
-  titleset.appendChild(title);
-  titleset.querySelector('titleset');
-  titleset.textContent = data;
-  document.body.appendChild(titleset);
+  title.textContent = data;
+  document.body.appendChild(title);
 }
 
 function back(){
