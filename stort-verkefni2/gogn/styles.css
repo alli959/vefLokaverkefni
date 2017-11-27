@@ -26,6 +26,8 @@ html {
     max-width: 48%;
   }
 
+/*CSS fyrir script.js */
+
   row1{
     display: flex;
     justify-content: space-around;
@@ -59,3 +61,45 @@ html {
     font-size: 42px;
     font-weight: bold;
   }
+
+  /*CSS fyrir videoplayer.js */
+
+  .videoplaying{
+    margin-bottom: 1em;
+    border: transparent;
+  }
+
+  .controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    border: transparent;
+    border-top:
+  }
+
+  #title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #videoplay{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+button{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10em;
+  height: 9em;
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+}

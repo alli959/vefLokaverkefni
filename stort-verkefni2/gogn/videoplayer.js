@@ -27,7 +27,7 @@ function playVideo(data){
 function setTitle(data){
   title.setAttribute("src", data);
   title.textContent = data;
-  document.body.appendChild(title);
+  document.h1.appendChild(title);
 }
 
 function back(){

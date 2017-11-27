@@ -18,7 +18,7 @@ function  playVideo(id){
     window.location.assign("video.html?id=" + id);
 }
 
-$.getJSON( "videos.json", function( data )  {
+$.getJSON( "videos.json", function(data)  {
     categories(data.categories);
     addVideo(data.videos);
     emptydiv();
@@ -89,7 +89,7 @@ function addVideo2(data){
   }
   div5.appendChild(picture3);
   document.body.appendChild(div5);
-  
+
 }
 
 
