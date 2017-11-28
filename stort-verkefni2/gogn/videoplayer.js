@@ -10,6 +10,11 @@ goback.textContent = "Til baka";
 
 document.body.appendChild(goback);
 
+var screenplay = document.getElementById('screenplay')
+
+
+
+
 
 
 var playing = false;
@@ -64,12 +69,15 @@ function pause(){
   video.pause();
   document.getElementById("pause").style.display = 'none';
   document.getElementById("play").style.display = 'inline-block';
+  screenplay.style.display = 'inline-block';
 }
 
 function play(){
   video.play();
   document.getElementById("play").style.display = 'none';
   document.getElementById("pause").style.display = 'inline-block';
+  screenplay.style.display = 'none';
+
 }
 
 function unmute(){
@@ -92,4 +100,8 @@ video.onclick = function(){
 
 goback.onclick = function(){
   window.location.href = "/";
+}
+
+screenplay.onclick = function(){
+  play();
 }
