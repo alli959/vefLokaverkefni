@@ -1,8 +1,10 @@
-'fyrir' +'use strict';
+'use strict';
 var empty = document.createElement('div');
 var cat1 = document.createElement('text1');
 var cat2 = document.createElement('text2');
 var cat3 = document.createElement('text3');
+
+
 var picture1 = document.createElement('img');
 var picture11 = document.createElement('img');
 var picture2 = document.createElement('img');
@@ -11,7 +13,39 @@ var picture3 = document.createElement('img');
 var picture33 = document.createElement('img');
 var picture4 = document.createElement('img');
 var picture44 = document.createElement('img');
+
+
 var source = document.createElement('source');
+
+
+var title1 = document.createElement('p');
+var title11 = document.createElement('p');
+var title2 = document.createElement('p');
+var title22 = document.createElement('p');
+var title3 = document.createElement('p');
+var title33 = document.createElement('p');
+var title4 = document.createElement('p');
+var title44 = document.createElement('p');
+
+
+var created1 = document.createElement('p');
+var created11 = document.createElement('p');
+var created2 = document.createElement('p');
+var created22 = document.createElement('p');
+var created3 = document.createElement('p');
+var created33 = document.createElement('p');
+var created4 = document.createElement('p');
+var created44 = document.createElement('p');
+
+var time1 = document.createElement('p');
+var time11 = document.createElement('p');
+var time2 = document.createElement('p');
+var time22 = document.createElement('p');
+var time3 = document.createElement('p');
+var time33 = document.createElement('p');
+var time4 = document.createElement('p');
+var time44 = document.createElement('p');
+
 
 
 
@@ -51,7 +85,18 @@ function addVideo(data){
     playVideo('1')
   }
   div2.appendChild(picture1);
-
+  title1.setAttribute("id", "title1");
+  title2.setAttribute("id", "title2");
+  title1.textContent = data[0].title;
+  title2.textContent = data[1].title;
+  created1.setAttribute("id", "created1");
+  created2.setAttribute("id", "created2");
+  created1.textContent = getCreated(data[0].created);
+  created2.textContent = getCreated(data[1].created);
+  time1.setAttribute("id", "time1");
+  time2.setAttribute("id", "time2");
+  time1.textContent = getDuration(data[0].duration);
+  time2.textContent = getDuration(data[1].duration);
 
   picture2.setAttribute("src", data[1].poster);
   picture2.onclick = function(){
@@ -59,6 +104,12 @@ function addVideo(data){
   }
   div2.appendChild(picture2);
   document.body.appendChild(div2);
+  document.body.appendChild(time1);
+  document.body.appendChild(title1);
+  document.body.appendChild(created1);
+  document.body.appendChild(time2);
+  document.body.appendChild(title2);
+  document.body.appendChild(created2);
 }
 
 function emptydiv(){
@@ -87,6 +138,27 @@ function addVideo2(data){
     playVideo('1')
   }
   div5.appendChild(picture11);
+  title11.setAttribute("id", "title11");
+  title3.setAttribute("id", "title3");
+  title4.setAttribute("id", "title4");
+  title11.textContent = data[0].title;
+  title3.textContent = data[2].title;
+  title4.textContent = data[3].title;
+  created11.setAttribute("id", "created11");
+  created3.setAttribute("id", "created3");
+  created4.setAttribute("id", "created4");
+  created11.textContent = getCreated(data[0].created);
+  created3.textContent = getCreated(data[2].created);
+  created4.textContent = getCreated(data[3].created);
+  time11.setAttribute("id", "time11");
+  time3.setAttribute("id", "time3");
+  time4.setAttribute("id", "time4");
+  time11.textContent = getDuration(data[0].duration);
+  time3.textContent = getDuration(data[2].duration);
+  time4.textContent = getDuration(data[3].duration);
+
+
+
 
 
   picture3.setAttribute("src", data[2].poster);
@@ -101,6 +173,16 @@ function addVideo2(data){
   }
   div5.appendChild(picture4);
   document.body.appendChild(div5);
+  document.body.appendChild(time11);
+  document.body.appendChild(title11);
+  document.body.appendChild(created11);
+  document.body.appendChild(time3);
+  document.body.appendChild(title3);
+  document.body.appendChild(created3);
+  document.body.appendChild(time4);
+  document.body.appendChild(title4);
+  document.body.appendChild(created4);
+
 }
 
 function categories2(data){
@@ -121,7 +203,24 @@ function addVideo3(data){
     playVideo('1')
   }
   div7.appendChild(picture22);
-
+  title22.setAttribute("id", "title22");
+  title33.setAttribute("id", "title33");
+  title44.setAttribute("id", "title44");
+  title22.textContent = data[1].title;
+  title33.textContent = data[2].title;
+  title44.textContent = data[3].title;
+  created22.setAttribute("id", "created22");
+  created33.setAttribute("id", "created22");
+  created44.setAttribute("id", "created22");
+  created22.textContent = getCreated(data[1].created);
+  created33.textContent = getCreated(data[2].created);
+  created44.textContent = getCreated(data[3].created);
+  time22.setAttribute("id", "time22");
+  time33.setAttribute("id", "time33");
+  time44.setAttribute("id", "time44");
+  time22.textContent = getDuration(data[1].duration);
+  time33.textContent = getDuration(data[2].duration);
+  time44.textContent = getDuration(data[3].duration);
 
   picture33.setAttribute("src", data[2].poster2);
   picture33.onclick = function(){
@@ -135,6 +234,16 @@ function addVideo3(data){
   }
   div7.appendChild(picture44);
   document.body.appendChild(div7);
+  document.body.appendChild(time22);
+  document.body.appendChild(title22);
+  document.body.appendChild(created22);
+  document.body.appendChild(time33);
+  document.body.appendChild(title33);
+  document.body.appendChild(created33);
+  document.body.appendChild(time44);
+  document.body.appendChild(title44);
+  document.body.appendChild(created44);
+
 }
 
 
@@ -153,16 +262,28 @@ function getCreated(data){
   const time = []
 
     const hour = {
-      value: data/1000,
+      value: ((data/1000)/60)/60,
       maxsize: 23,
       returnvalue1: ' klukkustund síðan',
       returnvalue2: ' klukkustundum síðan',
     };
     const day = {
       value: hour.value/24,
-      maxsize: 364,
+      maxsize: 6,
       returnvalue1: ' degi síðan',
       returnvalue2: ' dögum síðan',
+    };
+    const week = {
+      value: day.value/7,
+      maxsize: 4,
+      returnvalue1: ' viku síðan',
+      returnvalue2: ' vikum síðan',
+    };
+    const month = {
+      value: day.value/30,
+      maxsize: 11,
+      returnvalue1: ' mánuði síðan',
+      returnvalue2: ' mánuðum síðan',
     };
     const year = {
       value: day.value/265,
@@ -173,6 +294,8 @@ function getCreated(data){
 
     time.push(hour);
     time.push(day);
+    time.push(week);
+    time.push(month);
     time.push(year);
 
     for(var i = 0; i<time.length; i++){
@@ -190,7 +313,7 @@ function getCreated(data){
 
 
 
-  //kallar á þetta með videos.videos[i].created
+  //kallar á þetta með videos.videos[i].duration
 
   // skilar streng "mm:ss"
   function getDuration(data){
