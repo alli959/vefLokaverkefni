@@ -1,70 +1,23 @@
 # vefLokaverkefni
 
+# Hvernig skal keyra verkefnið
 
-# Basic
+fara skal í command prompt og fara í destenation á verkefninu ./gogn
+keyra skal:
 
-Sjá stöðuna á verkefni => ´git status´
+npm install
+npm run lint -s
+npm run dev
 
-Sjá branches og í hverju þú ert í => ´git branch´
+þar opnast slóðin á vefíðuna með nokkrum myndböndum, þú getur ýtt á þau og þá opnast önnur síða
+með myndbandsspilun.
+þú getur farið til baka á myndbandslista síðuna með því einfaldlega að ýta á "til baka"
 
-# Skrá username og password (svo þið þurfið ekki að gera það fyrir hvert push)
+# uppsetning verkefnisins
+verkefnið er allt inni í möppuni gögn, þar eru index.html, styles.css, video.html og videplayer.js
+það eru filearnir sem keyra verkefnið, 
+inni í möppuni img eru svg myndir sem notaðar eru í verkefninu.
 
-git config --global user.name "notandanafn"
-
-git config --global user.email "email@email.com"
-
-(það er líka hægt að láta git muna psswordið þitt)
-
-# Byrja að nota Git og sækja verkefnið
-
-Gera nýja möppu
-
-git remote
-
-git clone https://github.com/alli959/vefLokaverkefni
-
-cd Hopverkefni
-
-Núna ætti ´git remote´ að sýna "origin" á skjánum.
-
-´git fetch origin master´ sækir öll ný skjöl sem er búið að bæta við projectið en merge-ar ekki.
-
-´git pull origin master´ sækir öll ný skjöl og uppfærir þau sem þú ert með.
-
-# Dæmi með git branch og fara i tad
-
-git checkout branchnafn
-
-# Gera prufu skrá og commit-a
-
-touch test.txt
-
-git add -A
-
-git commit -m "Prufuskrá bætt við"
-
-Núna er búið að bæta við og commit-a test.txt á local branchinu, ekki master.
-
-# Hvernig skal vinna þetta.
-
-git branch "þá sérðu hvaða branchi þú ert í, vertu í þínu"
-
-git add skjalnafn
-
-git commit -m "message"
-
-git push origin branchnafn
-
-git checkout master
-
-git pull origin master  "mikilvægt að athuga hvort þú getir pullað, áður en þú pushar"
-
-git merge branchnafn
-
-git push origin master
-
-# Eyða branch ef það verður ekki notað aftur
-
-git branch -d nafn-a-branchi
-
-git push origin --delete nafn-a-branchi
+# Höfundar
+Alexander Guðmundsson - alg35@hi.is
+Emil Alfreðsson       - ema22@hi.is
