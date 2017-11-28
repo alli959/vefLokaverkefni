@@ -30,11 +30,20 @@ html {
   img{
     cursor: pointer;
     padding-top: 1em;
-    max-width: 48%;
+    max-width: 97%;
+  }
+
+  .row2>img{
+    max-width: 48%
   }
 
 
-  img:nth-of-type(3){
+  #img5div:nth-of-type(3){
+    margin-right: auto;
+    margin-left: 1%;
+  }
+
+  #img8div:nth-of-type(3){
     margin-right: auto;
     margin-left: 1%;
   }
@@ -43,6 +52,7 @@ html {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-left: 1%;
   }
 
   row2{
@@ -82,6 +92,7 @@ html {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 0.5em;
+    padding-top: 1em;
     font-size: 42px;
     font-weight: bold;
   }
@@ -92,6 +103,7 @@ html {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 0.5em;
+    padding-top: 1em;
     font-size: 42px;
     font-weight: bold;
   }
@@ -102,8 +114,13 @@ html {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 0em;
-    margin-left: 1%;
+  }
+
+  #img1div, #img2div, #img3div, #img4div, #img5div, #img6div, #img7div, #img8div{
+    border: transparent;
+    margin: 0;
+    padding: 0;
+    width: 48%;
   }
 
   /*CSS fyrir videoplayer.js */
@@ -126,7 +143,6 @@ html {
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-    padding-bottom: 1em;
   }
 
 
