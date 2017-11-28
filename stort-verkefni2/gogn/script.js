@@ -1,5 +1,27 @@
 'use strict';
 var empty = document.createElement('div');
+
+
+
+var img1div = document.createElement('div');
+img1div.setAttribute('id', 'img1div');
+var img2div = document.createElement('div');
+img2div.setAttribute('id', 'img2div');
+var img3div = document.createElement('div');
+img3div.setAttribute('id', 'img3div');
+var img4div = document.createElement('div');
+img4div.setAttribute('id', 'img4div');
+var img5div = document.createElement('div');
+img5div.setAttribute('id', 'img5div');
+var img6div = document.createElement('div');
+img6div.setAttribute('id', 'img6div');
+var img7div = document.createElement('div');
+img7div.setAttribute('id', 'img7div');
+var img8div = document.createElement('div');
+img8div.setAttribute('id', 'img8div');
+
+
+
 var cat1 = document.createElement('text1');
 var cat2 = document.createElement('text2');
 var cat3 = document.createElement('text3');
@@ -84,7 +106,8 @@ function addVideo(data){
   picture1.onclick = function(){
     playVideo('1')
   }
-  div2.appendChild(picture1);
+  div2.appendChild(img1div);
+  div2.appendChild(img2div);
   title1.setAttribute("id", "title1");
   title2.setAttribute("id", "title2");
   title1.textContent = data[0].title;
@@ -97,19 +120,23 @@ function addVideo(data){
   time2.setAttribute("id", "time2");
   time1.textContent = getDuration(data[0].duration);
   time2.textContent = getDuration(data[1].duration);
+  img1div.appendChild(picture1);
+  img1div.appendChild(time1);
+  img1div.appendChild(title1);
+  img1div.appendChild(created1);
+  img2div.appendChild(picture2);
+  img2div.appendChild(time2);
+  img2div.appendChild(title2);
+  img2div.appendChild(created2);
+
+
+
 
   picture2.setAttribute("src", data[1].poster);
   picture2.onclick = function(){
     playVideo('2');
   }
-  div2.appendChild(picture2);
   document.body.appendChild(div2);
-  document.body.appendChild(time1);
-  document.body.appendChild(title1);
-  document.body.appendChild(created1);
-  document.body.appendChild(time2);
-  document.body.appendChild(title2);
-  document.body.appendChild(created2);
 }
 
 function emptydiv(){
@@ -137,7 +164,9 @@ function addVideo2(data){
   picture11.onclick = function(){
     playVideo('1')
   }
-  div5.appendChild(picture11);
+  div5.appendChild(img3div);
+  div5.appendChild(img4div);
+  div5.appendChild(img5div);
   title11.setAttribute("id", "title11");
   title3.setAttribute("id", "title3");
   title4.setAttribute("id", "title4");
@@ -159,29 +188,32 @@ function addVideo2(data){
 
 
 
-
-
   picture3.setAttribute("src", data[2].poster);
   picture3.onclick = function(){
     playVideo('3');
   }
-  div5.appendChild(picture3);
 
   picture4.setAttribute("src", data[3].poster);
   picture4.onclick = function(){
     playVideo('3');
   }
-  div5.appendChild(picture4);
+
+  img3div.appendChild(picture11);
+  img3div.appendChild(time11);
+  img3div.appendChild(title11);
+  img3div.appendChild(created11);
+  img4div.appendChild(picture3);
+  img4div.appendChild(time3);
+  img4div.appendChild(title3);
+  img4div.appendChild(created3);
+  img5div.appendChild(picture4);
+  img5div.appendChild(time4);
+  img5div.appendChild(title4);
+  img5div.appendChild(created4);
+
+
   document.body.appendChild(div5);
-  document.body.appendChild(time11);
-  document.body.appendChild(title11);
-  document.body.appendChild(created11);
-  document.body.appendChild(time3);
-  document.body.appendChild(title3);
-  document.body.appendChild(created3);
-  document.body.appendChild(time4);
-  document.body.appendChild(title4);
-  document.body.appendChild(created4);
+
 
 }
 
@@ -196,13 +228,15 @@ function categories2(data){
 
 function addVideo3(data){
   var div7 = document.createElement('row3');
+  div7.appendChild(img6div);
+  div7.appendChild(img7div);
+  div7.appendChild(img8div);
 
 
   picture22.setAttribute("src", data[1].poster2);
   picture22.onclick = function(){
     playVideo('1')
   }
-  div7.appendChild(picture22);
   title22.setAttribute("id", "title22");
   title33.setAttribute("id", "title33");
   title44.setAttribute("id", "title44");
@@ -226,24 +260,28 @@ function addVideo3(data){
   picture33.onclick = function(){
     playVideo('3');
   }
-  div7.appendChild(picture33);
+
 
   picture44.setAttribute("src", data[3].poster2);
   picture44.onclick = function(){
     playVideo('3');
   }
-  div7.appendChild(picture44);
-  document.body.appendChild(div7);
-  document.body.appendChild(time22);
-  document.body.appendChild(title22);
-  document.body.appendChild(created22);
-  document.body.appendChild(time33);
-  document.body.appendChild(title33);
-  document.body.appendChild(created33);
-  document.body.appendChild(time44);
-  document.body.appendChild(title44);
-  document.body.appendChild(created44);
 
+  img6div.appendChild(picture22);
+  img6div.appendChild(time22);
+  img6div.appendChild(title22);
+  img6div.appendChild(created22);
+  img7div.appendChild(picture33);
+  img7div.appendChild(time33);
+  img7div.appendChild(title33);
+  img7div.appendChild(created33);
+  img8div.appendChild(picture44);
+  img8div.appendChild(time44);
+  img8div.appendChild(title44);
+  img8div.appendChild(created44);
+
+  document.body.appendChild(div7);
+  
 }
 
 
