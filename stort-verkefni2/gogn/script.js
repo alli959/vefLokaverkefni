@@ -2,7 +2,8 @@
 var empty = document.createElement('div');
 
 
-
+var img11div = document.createElement('div');
+img11div.setAttribute('id', 'img11div');
 var img1div = document.createElement('div');
 img1div.setAttribute('id', 'img1div');
 var img2div = document.createElement('div');
@@ -120,6 +121,8 @@ function addVideo(data){
   time2.setAttribute("id", "time2");
   time1.textContent = getDuration(data[0].duration);
   time2.textContent = getDuration(data[1].duration);
+  img11div.appendChild(picture1);
+  img11div.appendChild(time1);
   img1div.appendChild(picture1);
   img1div.appendChild(time1);
   img1div.appendChild(title1);
@@ -281,7 +284,7 @@ function addVideo3(data){
   img8div.appendChild(created44);
 
   document.body.appendChild(div7);
-  
+
 }
 
 

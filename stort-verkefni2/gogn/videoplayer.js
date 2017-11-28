@@ -4,7 +4,7 @@ var video = document.getElementById('videoplay');
 
 var source = document.createElement('source');
 
-var goback = document.createElement('p');
+var goback = document.createElement('back');
 
 goback.textContent = "Til baka";
 
