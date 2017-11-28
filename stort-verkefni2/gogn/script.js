@@ -101,6 +101,10 @@ $.getJSON( "videos.json", function(data)  {
 
 function addVideo(data){
   var div2 = document.createElement('row1');
+  var videodiv1 = document.createElement('div');
+  videodiv1.setAttribute('id','videodiv1');
+  var videodiv2 = document.createElement('div');
+  videodiv2.setAttribute('id','videodiv2');
 
 
   picture1.setAttribute("src", data[0].poster);
@@ -121,14 +125,14 @@ function addVideo(data){
   time2.setAttribute("id", "time2");
   time1.textContent = getDuration(data[0].duration);
   time2.textContent = getDuration(data[1].duration);
-  img11div.appendChild(picture1);
-  img11div.appendChild(time1);
-  img1div.appendChild(picture1);
-  img1div.appendChild(time1);
+  videodiv1.appendChild(picture1);
+  videodiv1.appendChild(time1);
+  videodiv2.appendChild(picture2);
+  videodiv2.appendChild(time2);
+  img1div.appendChild(videodiv1);
   img1div.appendChild(title1);
   img1div.appendChild(created1);
-  img2div.appendChild(picture2);
-  img2div.appendChild(time2);
+  img2div.appendChild(videodiv2);
   img2div.appendChild(title2);
   img2div.appendChild(created2);
 
@@ -161,7 +165,12 @@ function categories1(data){
 
 function addVideo2(data){
   var div5 = document.createElement('row2');
-
+  var videodiv3 = document.createElement('div');
+  videodiv3.setAttribute('id','videodiv3');
+  var videodiv4 = document.createElement('div');
+  videodiv4.setAttribute('id','videodiv4');
+  var videodiv5 = document.createElement('div');
+  videodiv5.setAttribute('id','videodiv5');
 
   picture11.setAttribute("src", data[0].poster2);
   picture11.onclick = function(){
@@ -201,16 +210,20 @@ function addVideo2(data){
     playVideo('3');
   }
 
-  img3div.appendChild(picture11);
-  img3div.appendChild(time11);
+  videodiv3.appendChild(picture11);
+  videodiv3.appendChild(time11);
+  videodiv4.appendChild(picture3);
+  videodiv4.appendChild(time3);
+  videodiv5.appendChild(picture4);
+  videodiv5.appendChild(time4);
+
+  img3div.appendChild(videodiv3);
   img3div.appendChild(title11);
   img3div.appendChild(created11);
-  img4div.appendChild(picture3);
-  img4div.appendChild(time3);
+  img4div.appendChild(videodiv4);
   img4div.appendChild(title3);
   img4div.appendChild(created3);
-  img5div.appendChild(picture4);
-  img5div.appendChild(time4);
+  img5div.appendChild(videodiv5);
   img5div.appendChild(title4);
   img5div.appendChild(created4);
 
@@ -234,6 +247,12 @@ function addVideo3(data){
   div7.appendChild(img6div);
   div7.appendChild(img7div);
   div7.appendChild(img8div);
+  var videodiv6 = document.createElement('div');
+  videodiv6.setAttribute('id','videodiv6');
+  var videodiv7 = document.createElement('div');
+  videodiv7.setAttribute('id','videodiv7');
+  var videodiv8 = document.createElement('div');
+  videodiv8.setAttribute('id','videodiv8');
 
 
   picture22.setAttribute("src", data[1].poster2);
@@ -270,16 +289,20 @@ function addVideo3(data){
     playVideo('3');
   }
 
-  img6div.appendChild(picture22);
-  img6div.appendChild(time22);
+  videodiv6.appendChild(picture22);
+  videodiv6.appendChild(time22);
+  videodiv7.appendChild(picture33);
+  videodiv7.appendChild(time33);
+  videodiv8.appendChild(picture44);
+  videodiv8.appendChild(time44);
+
+  img6div.appendChild(videodiv6);
   img6div.appendChild(title22);
   img6div.appendChild(created22);
-  img7div.appendChild(picture33);
-  img7div.appendChild(time33);
+  img7div.appendChild(videodiv7);
   img7div.appendChild(title33);
   img7div.appendChild(created33);
-  img8div.appendChild(picture44);
-  img8div.appendChild(time44);
+  img8div.appendChild(videodiv8);
   img8div.appendChild(title44);
   img8div.appendChild(created44);
 
