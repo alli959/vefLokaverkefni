@@ -21,6 +21,8 @@ html {
     margin-left: auto;
   }
 
+  /*CSS fyrir script.js */
+
   div:nth-of-type(4){
     border-bottom: transparent;
   }
@@ -31,12 +33,11 @@ html {
     max-width: 48%;
   }
 
-/*CSS fyrir script.js */
 
-img:nth-of-type(3){
-  margin-right: auto;
-  margin-left: 1%;
-}
+  img:nth-of-type(3){
+    margin-right: auto;
+    margin-left: 1%;
+  }
 
   row1{
     display: flex;
@@ -95,6 +96,16 @@ img:nth-of-type(3){
     font-weight: bold;
   }
 
+  #time1, #title1, #created1, #time2, #title2, #created2, #time11, #title11, #created11,
+  #time3, #title3, #created3, #time4, #title4, #created4, #time22, #title22, #created22,
+  #time33, #title33, #created33, #time44, #title44, #created44{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0em;
+    margin-left: 1%;
+  }
+
   /*CSS fyrir videoplayer.js */
 
   button{
@@ -118,15 +129,9 @@ img:nth-of-type(3){
     padding-bottom: 1em;
   }
 
-  #title1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 0.75em;
-  }
-
 
   .videoplaying{
+    position: relative;
     border: transparent;
     padding-bottom: 0em;
   }
@@ -137,6 +142,20 @@ img:nth-of-type(3){
     align-items: center;
     border: transparent;
     padding-bottom: 0.3em;
+  }
+
+  .playbutton{
+    border: transparent;
+    padding: 0;
+  }
+
+  .playbutt {
+    position: absolute;
+       left: 50%;
+       top: 47%;
+       transform: translate(-50%, -50%);
+       max-height: 5em;
+       max-width: 5em;
   }
 
   #title{
